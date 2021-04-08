@@ -1,6 +1,9 @@
 # Funk issue
 Repository provided in order to fix the https://github.com/RobertBroersma/funk/issues/1 bug.
 
+## Information
+This is a Next js web application. The issue is happening when changing between pages.
+
 ## Start the development server
 
 First, run the command:
