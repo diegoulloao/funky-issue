@@ -25,6 +25,9 @@ TypeError: Cannot read property 'removeEventListener' of null
 
 Extended log:
 ```
+Unhandled Runtime Error
+TypeError: Cannot read property 'removeEventListener' of null
+
 Call Stack
 eval
 webpack-internal:///./node_modules/@statikly/funk/dist/funk.esm.js (222:33)
