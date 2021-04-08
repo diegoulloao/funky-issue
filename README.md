@@ -13,6 +13,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Gitpod
+You can open the repository directly in Gitpod
+
+<a href="http://gitpod.io/#https://github.com/diegoulloao/funky-issue" target="_blank">
+  <img src="https://gitpod.io/button/open-in-gitpod.svg" alt="">
+</a>
+
 ## How to reproduce the issue
 1. Go to initial page
 2. Press link "Go to another page"
