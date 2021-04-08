@@ -1,65 +1,72 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { TabGroup } from '@statikly/funk'
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Link href="/page">Go to another page</Link>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <br /><br />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <div className="h-screen w-screen flex flex-col justify-center items-center">
+        <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
+          <TabGroup.TabList>
+            <TabGroup.Tab
+              index={0}
+              className="h-12 px-12 transition-colors duration-150"
+              activeClassName="bg-black text-white"
+              inactiveClassName="text-black"
+            >
+              Tab 1
+            </TabGroup.Tab>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <TabGroup.Tab
+              index={1}
+              className="h-12 px-12 transition-colors duration-150"
+              activeClassName="bg-black text-white"
+              inactiveClassName="text-black"
+            >
+              Tab 2
+            </TabGroup.Tab>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <TabGroup.Tab
+              index={2}
+              className="h-12 px-12 transition-colors duration-150"
+              activeClassName="bg-black text-white"
+              inactiveClassName="text-black"
+            >
+              Tab 3
+            </TabGroup.Tab>
+          </TabGroup.TabList>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+          <TabGroup.TabPanel
+            index={0}
+            className="p-16 transition-all transform h-64"
+            activeClassName="opacity-100 duration-500 translate-x-0"
+            inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            Content 1
+          </TabGroup.TabPanel>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+          <TabGroup.TabPanel
+            index={1}
+            className="p-16 transition-all transform h-64 flex flex-col"
+            activeClassName="opacity-100 duration-500 translate-x-0"
+            inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            Content 2
+          </TabGroup.TabPanel>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <TabGroup.TabPanel
+            index={2}
+            className="p-16 transition-all transform h-64"
+            activeClassName="opacity-100 duration-500 translate-x-0"
+            inactiveClassName="absolute opacity-0 -translate-x-2"
+          >
+            Content 3
+          </TabGroup.TabPanel>
+        </TabGroup>
+      </div>
+    </>
   )
 }
